@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #101827, #243b65);
+    color: white;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.stats div {
+    background: #ffffff15;
+    border: 1px solid #ffffff25;
+    padding: 12px 8px;
+    border-radius: 12px;
+    flex: 1;
+    font-size: 14px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 14px;
+    background: #3478f6;
+    color: white;
+    font-size: clamp(25px, 8vw, 42px);
+    cursor: pointer;
+    box-shadow: 0 4px 8px #0003;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.card:hover:not(:disabled) {
+    transform: translateY(-3px);
+}
+
+.card.open {
+    background: #ffffff;
+    color: #172554;
+    transform: rotateY('180deg');
+}
+
+.card.matched {
+    background: #22c55e;
+    cursor: default;
+}
+
+.card:disabled {
+    cursor: default;
+}
+
+.messag {
+    min-height: 24px;
+    margin: 22px 0;
+    color: #dbeafe;
+}
+
+#restart {
+    background: #38bdf8;
+    color: #102033;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background: #7dd3fc;
+}
+
+@media (max-width: 380px) {
+    .board {
+        gap: 7px;
+    }
+    .stats div {
+        font-size: 12px;
+        padding: 10px 4px;
+    }
+}

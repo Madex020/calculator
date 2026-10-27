@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Найди пару</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game">
+        <h1>Найди пару</h1>
+        <p class="subtitle">Найди все одинаковые картинки</p>
+
+        <div class="stats">
+            <div>Ходы: <span id="moves">0</span></div>
+            <div>Пары: <span id="pairs">0</span></div>
+            <div>Время: <span id="time">00:00</span></div>
+        </div>
+        <div id="board" class="board"></div>
+
+        <p id="message" class="message">
+            Найди две одинаковые карточки
+        </p>
+
+        <button id="restart">Новая игра</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
